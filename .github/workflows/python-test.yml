@@ -51,6 +51,11 @@ jobs:
           sudo ln -s /usr/local/opt/python@3.9/libexec/bin/python /usr/local/bin/python
           sudo ln -s /usr/local/opt/python@3.9/libexec/bin/pip /usr/local/bin/pip
 
+          rm -f /usr/local/bin/python3
+          rm -f /usr/local/bin/pip3
+          sudo ln -s /usr/local/opt/python@3.9/libexec/bin/python /usr/local/bin/python3
+          sudo ln -s /usr/local/opt/python@3.9/libexec/bin/pip /usr/local/bin/pip3
+
           which python
           which python3
           python --version
