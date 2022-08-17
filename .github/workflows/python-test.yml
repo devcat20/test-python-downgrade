@@ -32,6 +32,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+          export HOMEBREW_NO_AUTO_UPDATE=1
+          export HOMEBREW_NO_INSTALL_CLEANUP=1
           echo "unlinking python"
           brew unlink python
           echo "unlinking python3"
@@ -44,6 +46,8 @@ jobs:
           alias python=/usr/local/opt/python@3.9/libexec/bin/python
           alias pip=/usr/local/opt/python@3.9/libexec/bin/pip
 
+          rm -f /usr/local/bin/python
+          rm -f /usr/local/bin/pip
           sudo ln -s /usr/local/opt/python@3.9/libexec/bin/python /usr/local/bin/python
           sudo ln -s /usr/local/opt/python@3.9/libexec/bin/pip /usr/local/bin/pip
 
