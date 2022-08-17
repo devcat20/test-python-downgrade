@@ -62,4 +62,4 @@ jobs:
           which pip
           which pip3
 
-          pip install nose
+          pip install --user nose
