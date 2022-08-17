@@ -40,9 +40,9 @@ jobs:
           echo "installing python@3.9"
           brew install python@3.9
           
-          brew link --force --overwrite python@3.9
-          
           export PATH=$PATH:/usr/local/opt/python@3.9/libexec/bin
+          alias python=/usr/local/opt/python@3.9/libexec/bin/python
+          alias pip=/usr/local/opt/python@3.9/libexec/bin/pip
 
           which python
           which python3
